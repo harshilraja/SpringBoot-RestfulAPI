@@ -21,7 +21,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<java.version>1.7</java.version>
+		<surefire.version>2.17</surefire.version>
+		<jacoco.version>0.8.1</jacoco.version>
 	</properties>
 
 	<dependencies>
@@ -72,6 +74,27 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-surefire-plugin</artifactId>
+			  <version>${surefire.version}</version>
+			</plugin>
+			<plugin>
+			    <groupId>org.jacoco</groupId>
+			    <artifactId>jacoco-maven-plugin</artifactId>
+			    <version>${jacoco.version}</version>
+			    <executions>
+			        <execution>
+			            <id>default-prepare-agent</id>
+			            <goals><goal>prepare-agent</goal></goals>
+			        </execution>
+			        <execution>
+			            <id>default-report</id>
+			            <phase>prepare-package</phase>
+			            <goals><goal>report</goal></goals>
+			        </execution>
+			    </executions>
 			</plugin>
 		</plugins>
 	</build>

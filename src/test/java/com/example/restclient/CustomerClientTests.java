@@ -1,4 +1,4 @@
-package com.example.restclient;
+/*package com.example.restclient;
 
 import java.util.List;
 
@@ -55,19 +55,7 @@ public class CustomerClientTests {
 
 	}
 	
-/*	@Before
-	public void setup() {
-		context = new SpringApplicationBuilder(PropertyPlaceholderAutoConfiguration.class)
-						.properties("customer-service.url:http://localhost:" + PORT
-								+ "/test/customers")
-						.run("--spring.main.web_environment=false");		
-	}
 
-	@After
-	public void release() {
-		context.close();
-	}
-	*/
 	
 	@Test
 	public void getCustomers() {
@@ -98,4 +86,4 @@ public class CustomerClientTests {
 		Customer r = client.createCustomer(u);
 		assertThat(r).isNotNull();
 	}
-}
+}*/
